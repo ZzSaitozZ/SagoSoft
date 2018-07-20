@@ -2,42 +2,38 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    @*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>    
+    @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/Home")
     @Styles.Render("~/Content/Icon")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        
+    </style>
 </head>
 <body>
-    <div class="container-fluid Color fixed-top" style="border:thin;border-radius:0px 0px 100px 100px;padding:unset">
-        <div class="nav container-fluid" style="padding:unset">
-            <ul class="nav col-5">
-                <li class="col-lg-4" style="text-align:center"><a class="Menu" href="#">Website</a></li>
-                <li class="col-lg-4" style="text-align:center"><a class="Menu" href="#">Software</a></li>
-                <li class="col-lg-4" style="text-align:center"><a class="Menu" href="#">Android</a></li>
-            </ul>
-            <div class="col-2 text-center" style="background-color:black;border:thin;border-radius:100px 100px 100px 100px;color:white">
-                <h3 class="navbar-brand" style="font-size: larger; font-weight: bold;margin:unset">SagoSoft</h3>
-            </div>
-            <ul class=" nav col-5">
-                <li class="col-lg-4" style="text-align:center"><a class="Menu" href="#">News</a></li>
-                <li class="col-lg-4" style="text-align:center"><a class="Menu" href="#">About Us</a></li>
-                <li class="col-lg-4" style="text-align:center"><a class="Menu" href="#">Contact Us</a></li>
-            </ul>
-        </div>
+    <div class="E-container Top">
+        <a class="Ewons-logo" href="//www.ewons.net">
+            Ewons<span class="Dotcom">.com</span>
+        </a>
+        <div class="Introduce" >THE VIETNAM'S BEST WEB DEVELOPER TEAM</div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div class="Topnav">
+        <a class="Topnav-item icon fa fa-home Left"></a>
+        <a class="Topnav-item Left">WEBSITE</a>
+        <a class="Topnav-item Left">SOFTWARE</a>
+        <a class="Topnav-item Left">ANDROID</a>
+        <a class="Topnav-item Right">Contact Us</a>
+        <a class="Topnav-item Right">About Us</a>
+        <a class="Topnav-item Right">News</a>
     </div>
+    @Html.Partial("~/Views/Shared/CarouselTitle.cshtml")
+    @RenderBody()
 
-
+    @Scripts.Render("~/bundles/JavaScript")
     @RenderSection("scripts", required: false)
 </body>
 </html>

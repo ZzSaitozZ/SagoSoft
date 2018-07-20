@@ -24,24 +24,23 @@ namespace SagoSoft
                       "~/Resources/JS/Scripts/respond.js",
                       "~/Resources/JS/Scripts/umd/popper.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
                       "~/Resources/CSS/bootstrap/bootstrap.css",
+                      "~/Resources/CSS/bootstrap/bootstrap-grid.css",
+                      "~/Resources/CSS/bootstrap/bootstrap-reboot.css",
                       "~/Resources/CSS/bootstrap/site.css"));
 
-            bundles.Add(new StyleBundle("~/Content/Home").Include(
-                      "~/Resources/CSS/Home/FixStyle.css",
-                      "~/Resources/CSS/Home/Detail_Slider_Style.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Resources/CSS/Layout/PC.css",
+                      "~/Resources/CSS/Layout/Tablet.css",
+                      "~/Resources/CSS/Layout/Phone.css",
+                      "~/Resources/CSS/Website/WebsitePC.css"));
 
             bundles.Add(new StyleBundle("~/Content/Icon").Include(
                       "~/Resources/Icons/css/fontawesome-all.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/select").Include(
-                        "~/Resources/JS/Scripts/Select2/select2.min.js",
-                        "~/Resources/JS/Scripts/Item/BootstrapSelect/bootstrap-select.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/itemfilter").Include(
-                        "~/Resources/JS/Scripts/Item/Itemfilter.js"));
-
+            bundles.Add(new ScriptBundle("~/bundles/JavaScript").Include(
+                        "~/Resources/JS/Layout/Layout_1.js"));
         }
     }
 }

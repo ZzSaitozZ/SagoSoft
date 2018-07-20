@@ -1,0 +1,24 @@
+﻿@media only screen and (max-width: 736px ) {
+    .Top {
+        height: 68px
+    }
+        .Top .Ewons-logo {
+            position: relative;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+        }
+    .Introduce {
+        display:none;
+    }
+
+
+
+
+
+    .Baner-img {
+        width: 100%;
+        height: 200px;
+    }
+}

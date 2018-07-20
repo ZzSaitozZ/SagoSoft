@@ -26,5 +26,23 @@ namespace SagoSoft.Controllers
 
             return View();
         }
+        public ActionResult Website()
+        {
+            ViewBag.Message = "Our Website product";
+
+            return View();
+        }
+        public ActionResult Software()
+        {
+            ViewBag.Message = "Our Software product";
+
+            return View();
+        }
+        public ActionResult Android()
+        {
+            ViewBag.Message = "Our App product";
+
+            return View();
+        }
     }
 }
