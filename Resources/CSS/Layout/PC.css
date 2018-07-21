@@ -7,6 +7,7 @@ body {
     min-height: 100%;
     top: 0px;
     padding:unset;
+    transition:all 250s ease-in-out;
 }
 .E-container {
     padding: 0.01em 16px
@@ -113,7 +114,7 @@ h2, h3, h4 .Title-text{
 li.Title-text{
     font-size:20px;
 }
-a.Title-btn {
+a.Title-webbtn {
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -133,28 +134,69 @@ a.Title-btn {
     line-height: 1.5;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    color: #007bff;
+    color: #007bff !important;
     background-color: transparent;
     background-image: none;
     border-color: #007bff;
 }
-    a.Title-btn:hover {
+    a.Title-webbtn:hover {
         color: #fff !important;
         background-color: #007bff;
         border-color: #007bff;
     }
-    .CategoryChoice {
-        padding-left: 50px;
-        padding-right: 50px;
-        height: 0px;
+.CategoryChoice {
+        text-align:center;
+        padding-left:100px;
+        padding-right:100px;
+        height: auto;
         overflow: hidden;
         transition: 0.5s;
     }
     .CategoryChoice.Show {
-        height: 100px;
+        margin-top:30px;
+        margin-bottom:20px;
+        height: auto !important;
         transition: 0.5s;
     }
-
+    .CategoryChoice .row .col-lg-4 div {
+        margin: 5px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        transition: all 0.2s linear;   
+    }
+    .CategoryChoice .row .col-lg-4 div img{
+        height: 80%;
+    }
+a.Title-softbtn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #fff !important;
+    background-color: transparent;
+    background-image: none;
+    border-color: #fff;
+}
+    a.Title-softbtn:hover {
+        color: #000000 !important;
+        background-color: #fff;
+    }
 
 
 .Category {
