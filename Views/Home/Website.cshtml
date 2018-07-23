@@ -10,10 +10,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <style>
-        
-        .items{
-            width:32%;display:inline-block;margin-top:20px;margin-bottom:15px;
+
+        .items {
+            width: 32%;
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 15px;
+
+            top:0;transition:top 0.5s;
+            position: relative;
         }
+            .items:hover {
+                top: -10px;
+                transition: top 0.5s;
+                
+            }
 
         #containerx{
             font-size:0;
@@ -31,19 +42,12 @@
            padding-bottom:5px;
         }
 
-        #inner-img {
-            
-            width:100%;           
-            transition: top 0.5s;
-            top: 0;
-            position: relative;
+        #inner-img {            
+            width:100%;
             max-height:450px;
         }
 
-            #inner-img:hover {
-                top: -10px;
-                transition: top 0.5s
-            }
+           
         @@media (min-width:800px) {
             .items:nth-child(3n+2) {
                 margin-left: 2%;
