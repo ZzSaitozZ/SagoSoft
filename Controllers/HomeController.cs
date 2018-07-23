@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SagoSoft.ViewModel;
+
 
 namespace SagoSoft.Controllers
 {
@@ -30,12 +32,15 @@ namespace SagoSoft.Controllers
         {
             ViewBag.Message = "Our Website product";
 
-            return View();
+            
+            EWONSEntities EWDal = new EWONSEntities();
+            WebTemplateVM TemplatesVM = new WebTemplateVM();
+            TemplatesVM.WebTemps = EWDal.WebTemplates.ToList();
+            return View(TemplatesVM);
         }
         public ActionResult Software()
         {
-            ViewBag.Message = "Our Software product";
-
+           
             return View();
         }
         public ActionResult Android()

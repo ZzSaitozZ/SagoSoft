@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    @*<div class="E-container Top">
+    <div class="E-container Top">
         <a class="Ewons-logo" href="//www.ewons.net">
             Ewons<span class="Dotcom">.com</span>
         </a>
@@ -29,10 +29,10 @@
         <a class="Topnav-item Right">Contact Us</a>
         <a class="Topnav-item Right">About Us</a>
         <a class="Topnav-item Right">News</a>
-    </div>*@
-    @*@Html.Partial("~/Views/Shared/CarouselTitle.cshtml")*@
+    </div>
+    @Html.Partial("~/Views/Shared/CarouselTitle.cshtml")
     @RenderBody()
-    @*<footer>
+    <footer>
         <hr />
         <div class="text-center" >
             <h3>Hãy kết nối với chúng tôi</h3>
@@ -98,7 +98,7 @@
                 © 2018 Copyright
             </div>
         </div>
-    </footer>*@
+    </footer>
     @Scripts.Render("~/bundles/JavaScript")
     @RenderSection("scripts", required: false)
 

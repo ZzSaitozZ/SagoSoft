@@ -61,6 +61,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -155,6 +157,25 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\WebTemplateVM.cs" />
+    <Compile Include="WebTemplate.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebTemplate.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebTemplate.cs">
+      <DependentUpon>WebTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebTemplate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebTemplate.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WebTemplate1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -217,34 +238,34 @@
     <Content Include="Resources\Images\Index\water.jpeg" />
     <Content Include="Resources\Images\Index\waterwaste.jpg" />
     <Content Include="Resources\Images\Index\waterwaste1.jpg" />
-    <Content Include="Resources\Images\Templates\Business\Eco power.jpg" />
+    <Content Include="Resources\Images\Templates\Business\Eco-power.jpg" />
     <Content Include="Resources\Images\Templates\Business\Exertion.jpg" />
     <Content Include="Resources\Images\Templates\Business\Fabricate.jpg" />
-    <Content Include="Resources\Images\Templates\Business\Home services.jpg" />
+    <Content Include="Resources\Images\Templates\Business\Home-services.jpg" />
     <Content Include="Resources\Images\Templates\Business\Party.jpg" />
     <Content Include="Resources\Images\Templates\Business\Resort.jpg" />
-    <Content Include="Resources\Images\Templates\Business\Solar energy.jpg" />
+    <Content Include="Resources\Images\Templates\Business\Solar-energy.jpg" />
     <Content Include="Resources\Images\Templates\Business\Transports.jpg" />
     <Content Include="Resources\Images\Templates\Business\Wool.jpg" />
     <Content Include="Resources\Images\Templates\Business\Workmanship.jpg" />
     <Content Include="Resources\Images\Templates\Company\Anchor.jpg" />
-    <Content Include="Resources\Images\Templates\Company\Brisk biz.jpg" />
+    <Content Include="Resources\Images\Templates\Company\Brisk-biz.jpg" />
     <Content Include="Resources\Images\Templates\Company\Brownie.jpg" />
-    <Content Include="Resources\Images\Templates\Company\Build up.jpg" />
+    <Content Include="Resources\Images\Templates\Company\Build-up.jpg" />
     <Content Include="Resources\Images\Templates\Company\Coadunate.jpg" />
     <Content Include="Resources\Images\Templates\Company\Corporation.jpg" />
     <Content Include="Resources\Images\Templates\Company\Exploit.jpg" />
-    <Content Include="Resources\Images\Templates\Company\Farming company.jpg" />
+    <Content Include="Resources\Images\Templates\Company\Farming-company.jpg" />
     <Content Include="Resources\Images\Templates\Company\Invent.jpg" />
     <Content Include="Resources\Images\Templates\Company\Stalwart.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Combat game.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Corsa racer.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Fantasy world.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Game robo.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Games center.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Games hub.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Games park.jpg" />
-    <Content Include="Resources\Images\Templates\Games\Games zone.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Combat-game.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Corsa-racer.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Fantasy-world.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Game-robo.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Games-center.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Games-hub.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Games-park.jpg" />
+    <Content Include="Resources\Images\Templates\Games\Games-zone.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Arcadia.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Bird.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Catchy.jpg" />
@@ -252,19 +273,19 @@
     <Content Include="Resources\Images\Templates\Personal\Futura.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Memoir.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Preface.jpg" />
-    <Content Include="Resources\Images\Templates\Personal\Professional cv.jpg" />
+    <Content Include="Resources\Images\Templates\Personal\Professional-cv.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Resume.jpg" />
     <Content Include="Resources\Images\Templates\Personal\Succinct.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Bigshope.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Electronic store.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Extro electronics.png" />
-    <Content Include="Resources\Images\Templates\Shop Online\Food shop.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Grocery shoppy.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Musico.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Musicx.png" />
-    <Content Include="Resources\Images\Templates\Shop Online\Smart bazaar.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Smart shop.jpg" />
-    <Content Include="Resources\Images\Templates\Shop Online\Super_ market.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Bigshope.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Electronic-store.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Extro-electronics.png" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Food-shop.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Grocery-shoppy.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Musico.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Musicx.png" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Smart-bazaar.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Smart-shop.jpg" />
+    <Content Include="Resources\Images\Templates\ShopOnline\Super-market.jpg" />
     <Content Include="Resources\JS\Layout\Layout_1.js" />
     <Content Include="Resources\JS\Scripts\bootstrap.bundle.js" />
     <Content Include="Resources\JS\Scripts\bootstrap.bundle.min.js" />
@@ -318,6 +339,16 @@
     <Content Include="Resources\Icons\webfonts\fa-solid-900.ttf" />
     <Content Include="Resources\Icons\webfonts\fa-solid-900.woff" />
     <Content Include="Resources\Icons\webfonts\fa-solid-900.woff2" />
+    <Content Include="WebTemplate.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WebTemplate.edmx</DependentUpon>
+      <LastGenOutput>WebTemplate.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WebTemplate.edmx</DependentUpon>
+      <LastGenOutput>WebTemplate1.cs</LastGenOutput>
+    </Content>
     <None Include="Resources\JS\Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Resources\JS\Scripts\jquery-3.3.1.js" />
     <Content Include="Resources\JS\Scripts\jquery-3.3.1.min.js" />
@@ -357,6 +388,13 @@
     <Content Include="Views\Home\Website.cshtml" />
     <Content Include="Views\Home\Software.cshtml" />
     <Content Include="Views\Home\Android.cshtml" />
+    <EntityDeploy Include="WebTemplate.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WebTemplate.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="WebTemplate.edmx.diagram">
+      <DependentUpon>WebTemplate.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -392,6 +430,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Resources\JS\Scripts\index.d.ts" />
