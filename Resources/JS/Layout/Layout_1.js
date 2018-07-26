@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
     'use strict';
     var c, currentScrollTop = 0;
+
+    $("#map").height ( $("#ContactUs").height())
     //var Left = $("#MenuLeft")
     //var Right = $("#MenuRight")
     //var Menu2 = $("#Menubar2")
@@ -39,4 +41,15 @@
         }
     })
 });
+window.onscroll = function () { myFunction() };
 
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}

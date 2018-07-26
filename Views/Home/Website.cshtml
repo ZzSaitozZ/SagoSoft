@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Website";    
+    ViewBag.Title = "Website";
 }
 @model SagoSoft.ViewModel.WebTemplateVM
 <head>
@@ -62,7 +62,7 @@
     
     <h1 style="text-align:center;letter-spacing:3px;font-family:fontawesome; color:#808080">WEBSITE TEMPLATE</h1>
     <div class="row justify-content-center">
-        <div class="col-lg-2 Category">
+        <div class="col-2 Category">
             <h4 style="text-align:center;letter-spacing:3px;font-family:fontawesome; color:#808080">Category</h4>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="Category1" checked>
@@ -83,22 +83,20 @@
                 </label>
             </div>
         </div>
-    </div>
-    <div class="container-f">
-        <div id="containerx">
-            @foreach (var template in Model.WebTemps)
-    {
-        <div class="items " data-category="@template.Category">
-            <img id="inner-img" src="@template.Image" />
-            <h4 id="inner-name">@template.Name.ToUpper()</h4>
-        </div>
-}
+        <div class="container-f col-10">
+            <div id="containerx">
+                @foreach (var template in Model.WebTemps)
+                 {
+                <div class="items " data-category="@template.Category">
+                    <img id="inner-img" src="@template.Image" />
+                    <h4 id="inner-name">@template.Name.ToUpper()</h4>
 
-
-
-         
+                </div>
+                  }
+            </div>
         </div>
     </div>
+    
 
    
 </body>
